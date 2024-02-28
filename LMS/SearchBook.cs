@@ -14,12 +14,29 @@ namespace LibraryManagementSystem
                 Console.WriteLine($"Books found with title '{title}':");
                 foreach (var book in foundBooks)
                 {
+                    Console.WriteLine();
                     Console.WriteLine($"{book.Title} by {book.Author}");
                 }
             }
             else
             {
                 Console.WriteLine($"No books found with title '{title}'.");
+            }
+
+
+        }
+
+        public static void SearchByID(Library library, int id)
+        {
+            
+            foreach (var book in library.GetBooks())
+            {
+                
+                if (book.BookID == id)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine($"{book.BookID} {book.Title} by {book.Author}");
+                }
             }
         }
     }

@@ -7,12 +7,22 @@ namespace LibraryManagementSystem
     {
         public static void ShowBooks(Library library)
         {
+            Console.WriteLine();
             Console.WriteLine("Books in the library:");
 
             foreach (var book in library.GetBooks())
             {
-                Console.WriteLine($"{book.Title} by {book.Author}");
+                
+                Console.WriteLine($"{book.BookID} {book.Title} by {book.Author}");
+
             }
+
+            Console.WriteLine();
+
+
+
         }
+
+
     }
 }
