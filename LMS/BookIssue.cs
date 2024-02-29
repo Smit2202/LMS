@@ -10,14 +10,27 @@ namespace LibraryManagementSystem
 
 		public BookIssue()
 		{
+			
 			bookIssue = new List<ULMS>();
 		}
 
-		public void AddUname(string name)
+	
+
+
+
+        public void AddUname(string name, string bookname)
 		{
-			bookIssue.Add(new ULMS(name));
-			Console.WriteLine("person added successfully.");
-		}
+			
+          
+                bookIssue.Add(new ULMS(name, bookname));
+                Console.WriteLine("person added successfully.");
+
+
+
+
+
+            
+        }
 
 		//get all books
 		public List<ULMS> getUname()

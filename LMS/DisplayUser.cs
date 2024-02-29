@@ -14,6 +14,7 @@ namespace LibraryManagementSystem
             {
 
                 Console.WriteLine($"{book.Uname} {book.BookID}");
+                book.Availability = false;
 
             }
 

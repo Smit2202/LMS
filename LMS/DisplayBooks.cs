@@ -13,7 +13,7 @@ namespace LibraryManagementSystem
             foreach (var book in library.GetBooks())
             {
                 
-                Console.WriteLine($"{book.BookID} {book.Title} by {book.Author}");
+                Console.WriteLine($" {Environment.NewLine} ID={book.BookID} {book.Title} by {book.Author}");
 
             }
 

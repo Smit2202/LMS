@@ -5,18 +5,28 @@ namespace LibraryManagementSystem
     public class CheckAvailability
     {
         // Function to check the availability of a book in the library
-        public static void CheckBookAvailability(Library library, string title)
+        public static bool CheckBookAvailability(Library library, string title)
         {
+            
             var books = library.GetBooks();
             foreach (var book in books)
             {
-                if (book.Title.ToLower() == title.ToLower())
+                if (book.Title == title)
                 {
-                    Console.WriteLine($"Book '{title}' is {(book.Availability ? "available" : "not available")} in the library.");
-                    return;
+
+                    //if (book.Availability)
+                    //{
+                    //    Console.WriteLine($"Book '{title}' is available");
+                    //}
+                    //else
+                    //{
+                    //    Console.WriteLine($"Book '{title}' is not available");
+                    //}
+                    return true;
                 }
             }
             Console.WriteLine($"Book '{title}' is not found in the library.");
+            return false;
         }
     }
 }

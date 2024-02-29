@@ -10,6 +10,9 @@ namespace LibraryManagementSystem
         public Library()
         {
             library = new List<LMS>();
+
+            library.Add(new LMS("Title_1", "Author_1", 101, true));
+            library.Add(new LMS("Title_2", "Author_2", 102, true));
         }
 
         public void AddBook(string title, string author, int bookid)
@@ -24,6 +27,7 @@ namespace LibraryManagementSystem
             //}
 
             library.Add(new LMS(title, author, bookid, true));
+            
             Console.WriteLine("Book added successfully.");
         }
 
